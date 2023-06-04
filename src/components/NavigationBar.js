@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaBars, FaTimes } from "react-icons/fa"
+//import { FaBars, FaTimes } from "react-icons/fa"
 import { Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 

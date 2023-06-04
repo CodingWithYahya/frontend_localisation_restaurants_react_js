@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import NavigationBar from '../components/NavigationBar';
 import Carousel from 'react-bootstrap/Carousel';
 import './Restaurants.css'; // Import the CSS file
@@ -13,8 +13,8 @@ const Restaurants = () => {
   const [zones, setZones] = useState([]);
   const [villes, setVilles] = useState([]);
   const [series, setSeries] = useState([]);
-  const [specialites, setSpecialites] = useState([]);
-  const [photos, setPhotos] = useState([]);
+  //const [specialites, setSpecialites] = useState([]);
+  //const [photos, setPhotos] = useState([]);
 
   const loadZones = async () => {
     const result = await axios.get('http://localhost:8082/zones/all');
@@ -26,30 +26,30 @@ const Restaurants = () => {
     setVilles(result.data);
   };
 
-  const loadPhotos = async () => {
+  /*const loadPhotos = async () => {
     const result = await axios.get('http://localhost:8082/photos/all');
     setPhotos(result.data);
-  };
+  };*/
 
   const loadSeries = async () => {
     const result = await axios.get('http://localhost:8082/series/all');
     setSeries(result.data);
   };
 
-  const loadSpecialites = async () => {
+  /*const loadSpecialites = async () => {
     const result = await axios.get('http://localhost:8082/specialites/all');
     setSpecialites(result.data);
-  };
+  };*/
 
-  const { id } = useParams();
+  //const { id } = useParams();
 
   useEffect(() => {
     loadRestaurants();
     loadZones();
     loadVilles();
-    loadPhotos();
+    //loadPhotos();
     loadSeries();
-    loadSpecialites();
+    //loadSpecialites();
   }, []);
 
   const loadRestaurants = async () => {
@@ -92,10 +92,10 @@ const Restaurants = () => {
                   const zone = zones.find((zone) => restaurant.zone && zone.id === restaurant.zone.id);
                   const ville = villes.find((ville) => zone.ville && ville.id === zone.ville.id);
                   const serie = series.find((serie) => restaurant.serie && serie.id === restaurant.serie.id);
-                  const specialite = specialites.find((specialite) => restaurant.specialite && specialite.id === restaurant.specialite.id);
+                  //const specialite = specialites.find((specialite) => restaurant.specialite && specialite.id === restaurant.specialite.id);
 
-                  const restaurantPhotos = photos.filter((photo) => restaurant.photo === photos.id);//restaurant.photo && photo.id === restaurant.photo.id
-                  const restaurantPhotos2 = photos.find((photo) => restaurant.photo && photo.id === restaurant.photo.id);
+                  //const restaurantPhotos = photos.filter((photo) => restaurant.photo === photos.id);//restaurant.photo && photo.id === restaurant.photo.id
+                  //const restaurantPhotos2 = photos.find((photo) => restaurant.photo && photo.id === restaurant.photo.id);
 
 
                   return (

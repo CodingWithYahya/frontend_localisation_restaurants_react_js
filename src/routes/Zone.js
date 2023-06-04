@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavigationBar from '../components/NavigationBar';
 
 const Zone = () => {
@@ -8,7 +8,7 @@ const Zone = () => {
   const [zones, setZones] = useState([]);
   const [villes, setVilles] = useState([]);
 
-  const { id } = useParams();
+  //const { id } = useParams();
 
   useEffect(() => {
     loadZones();

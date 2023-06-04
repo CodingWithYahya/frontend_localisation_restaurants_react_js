@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
 import { useEffect } from 'react';
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import NavigationBar from '../components/NavigationBar';
 
 
@@ -11,7 +11,7 @@ const Ville = () => {
 
   const [users, setUsers] = useState([]);
 
-  const { id } = useParams();
+  //const { id } = useParams();
 
   useEffect(() => {
     loadUsers();

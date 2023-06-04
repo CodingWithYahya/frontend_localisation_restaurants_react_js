@@ -21,7 +21,7 @@ export default function AddRestaurant() {
     },
     specialite: [],
   });
-  const { nom, adresse, description, latitude, longitude, hourOpened, hourClosed, zone, serie, specialite } = restaurant;
+  const { nom, adresse, description, latitude, longitude, hourOpened, hourClosed, zone, serie} = restaurant;
 
   const [zones, setZones] = useState([]);
   const [series, setSeries] = useState([]);
