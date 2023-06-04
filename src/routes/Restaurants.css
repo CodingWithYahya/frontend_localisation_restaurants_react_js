@@ -1,0 +1,19 @@
+.restaurant-image {
+  width: 250px;
+}
+
+.description-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* ajustez la valeur en fonction de votre préférence */
+}
+.restaurant-carousel-image {
+  width: 250px;
+  height: 250px; /* Vous pouvez ajuster cette valeur en fonction de vos besoins */
+  object-fit: cover; /* Pour conserver les proportions de l'image */
+}
+.table-container {
+  max-width: 4000px; /* Ajustez la valeur selon vos besoins */
+  margin: 50 auto; /* Centre la table horizontalement */
+}    
